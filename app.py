@@ -37,7 +37,7 @@ st.markdown("""
 # Title
 # ------------------------- #
 st.title("🎓 CGPA Calculator (Weighted Average Method)")
-st.write("Easily calculate your CGPA semester by semester using GPA & credit hours.")
+
 
 # ------------------------- #
 # Session state for semesters
@@ -45,7 +45,7 @@ st.write("Easily calculate your CGPA semester by semester using GPA & credit hou
 if "semesters" not in st.session_state:
     st.session_state.semesters = []
 
-st.header("➕ Add Semester Details")
+st.header("Add Semester Details")
 
 semester_no = st.number_input("Semester Number", min_value=1, max_value=8, value=len(st.session_state.semesters)+1)
 gpa = st.number_input("GPA of this semester", min_value=0.0, max_value=4.0, step=0.01, format="%.2f")
